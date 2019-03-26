@@ -1,0 +1,7 @@
+{
+	"language_id": "py",
+	"path": ".",
+	"scripts": [
+		"run_model.py"
+	]
+}
