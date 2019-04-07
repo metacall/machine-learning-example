@@ -8,9 +8,9 @@
 #import numpy as np
 #import matplotlib.pyplot as plt
 #import pandas as pd
-from joblib import dump,load
+import pickle
 
-regressor = load('model.joblib')
+regressor = pickle.load(open('model.sav','rb'))
 
 # Importing the dataset
 '''dataset = pd.read_csv('Salary_Data.csv')

@@ -1,10 +1,9 @@
 # Simple Linear Regression
 
 # Importing the libraries
-import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from joblib import dump, load
+import pickle
 
 # Importing the dataset
 dataset = pd.read_csv('Salary_Data.csv')
@@ -22,7 +21,7 @@ regressor.fit(X_train, y_train)
 
 # Predicting the Test set results
 y_pred = regressor.predict(X_test)
-dump(regressor,'model.joblib')
+pickle.dump(regressor,open('model.sav','wb'))
 
 # Visualising the Training set results
 plt.scatter(X_train, y_train, color = 'red')
