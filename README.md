@@ -1,5 +1,5 @@
 # metacall-ml-example
-A repository to host ML examples for Metacall
+A repository to host Machine Learning examples for Metacall
 
 > run_model.py has actual exported function
 
