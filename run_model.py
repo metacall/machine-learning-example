@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 
-# Model by: https://github.com/akash-joshi/metacall-ml-example
+# Model by: https://github.com/akash-joshi
 import pickle
 import os
 
-current_path = os.path.dirname(os.path.realpath(__file__))
+# Read model file
+basepath = os.path.dirname(os.path.abspath(__file__))
 
-regressor = pickle.load(open('model.sav','rb'))
+with open(os.path.join(basepath, 'model.sav'), 'rb') as f:
+  regressor = pickle.load(f)
 
 def predict_salary(input):
 	return regressor.predict(input).tolist()
