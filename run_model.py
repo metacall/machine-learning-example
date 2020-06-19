@@ -12,3 +12,5 @@ with open(os.path.join(basepath, 'model.sav'), 'rb') as f:
 
 def predict_salary(input):
 	return regressor.predict(input).tolist()
+
+# print(predict_salary([[10], [20]]))
